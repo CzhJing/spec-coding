@@ -131,7 +131,7 @@ Mention any of the following to activate SpecCoding:
 - "refactor XXX"
 - "fix bug"
 
-### 7-Step Workflow
+### 8-Step Workflow
 
 ```
 ① Codebase Exploration   → Read code, output summary, wait for confirmation
@@ -230,7 +230,7 @@ All Pass → Mark complete ✅
 | Type | Examples | Full Workflow? |
 |------|----------|----------------|
 | Small change | Copy, logs, minor refactor | Simplified, delta spec if behavior changes |
-| Regular feature | New interface, flow adjustment | Full 7-step workflow |
+| Regular feature | New interface, flow adjustment | Full 8-step workflow |
 | Complex refactor | Module split, auth change, library swap | Full workflow + rollback check |
 
 ---
