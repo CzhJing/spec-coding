@@ -77,13 +77,14 @@ ruflo --version
 
 **在 Claude Code 中启用：**
 
-```bash
-# 确保已安装 Claude Code CLI
-claude --version
+在 Claude Code 配置文件（如 `~/.claude/settings.json`）中添加环境变量：
 
-# Agent Teams 模式在 Claude Code 2.0+ 中默认可用
-# 使用 /team 命令或通过设置启用
-claude config set agentTeams true
+```json
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
 ```
 
 **验证可用的子代理：**
@@ -100,7 +101,7 @@ ls ~/.claude/agents/
 
 ```bash
 # 克隆此 Skill 仓库
-git clone <this-repo-url> ~/.claude/skills/speccoding
+git clone https://github.com/CzhJing/spec-coding.git ~/.claude/skills/speccoding
 
 # 或复制到你的项目中
 cp -r speccoding/ <your-project>/.claude/skills/

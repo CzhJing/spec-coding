@@ -2,6 +2,8 @@
 
 > AI-assisted development workflow skill. Lock boundaries with OpenSpec first, then execute within boundaries with Superpowers.
 
+[中文文档](README.zh.md)
+
 ---
 
 ## Overview
@@ -77,13 +79,14 @@ ruflo --version
 
 **Enable in Claude Code:**
 
-```bash
-# Ensure Claude Code CLI is installed
-claude --version
+Add the environment variable to your Claude Code configuration file (e.g. `~/.claude/settings.json`):
 
-# Agent teams mode is available by default in Claude Code 2.0+
-# Use /team command or enable via settings
-claude config set agentTeams true
+```json
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
 ```
 
 **Verify available subagents:**
@@ -100,7 +103,7 @@ ls ~/.claude/agents/
 
 ```bash
 # Clone this skill repository
-git clone <this-repo-url> ~/.claude/skills/speccoding
+git clone https://github.com/CzhJing/spec-coding.git ~/.claude/skills/speccoding
 
 # Or copy to your project
 cp -r speccoding/ <your-project>/.claude/skills/
